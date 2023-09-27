@@ -1,5 +1,5 @@
 import "./Skill.css";
-import { useState, MouseEvent, KeyboardEvent, MutableRefObject } from "react";
+import { useState, MouseEvent, KeyboardEvent, TouchEvent, MutableRefObject } from "react";
 import spriteImg from "../../../assets/img/talent-icons-sprite.png";
 import { counter, increment, decrement } from "../../../utils/counter";
 import config from "../../../_config.json";
@@ -52,6 +52,14 @@ const Skill: React.FC<SkillProps> = ({
       return true;
     }
   };
+  
+  // One touch on mobile adds a skill point
+  // Two touches removes a skill point
+  const handleMobileTouch = (e: TouchEvent) => {
+    if (e.touches) {
+			removeSkillPoint();
+		}
+  };
 
   const handleClick = () => {
     if (count < config.maxSkillPoints && !activeClass && determineDisabled()) {
@@ -68,6 +76,7 @@ const Skill: React.FC<SkillProps> = ({
         className={`skill__btn ${activeClass ? "skill__btn--active" : ""}`}
         onClick={handleClick}
         onContextMenu={handleRightClick}
+        onTouchStart={handleMobileTouch}
         onKeyUp={handleAccessibleKeys}
         data-testid="skill__btn"
       >
