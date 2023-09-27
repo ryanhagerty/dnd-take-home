@@ -18,13 +18,6 @@ npm run lint / Runs eslint for linting your JS
 npm run test / Runs tests for all our components
 npm run coverage / Visualizes and exposes code coverage
 ```
-### What's with DND-00X?
-You might see some code comments such as:
-```
-TODO: DND-00X - Remove this.
-```
-Most TODOs get chucked into the void, never to be spoken of again. I
-like to make an actionable backlog ticket so that it's not forgotten. 
 
 ### Technology used
 - [React](https://react.dev/)
