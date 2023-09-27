@@ -1,0 +1,5 @@
+/* Breakpoints */
+@custom-media --small (min-width: 540px);
+@custom-media --medium (min-width: 767px);
+@custom-media --large (min-width: 1080px);
+@custom-media --xlarge (min-width: 1200px);

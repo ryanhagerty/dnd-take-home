@@ -1,0 +1,28 @@
+@import "../../00-base/breakpoints.css";
+
+.skill-total {
+  position: relative;
+  align-self: center;
+  margin: 0 auto;
+  padding: 1.2rem 2.4rem;
+  text-align: center;
+  background: rgba(var(--c-black-rgb), 0.4);
+  border: 1px solid var(--c-gray--dark);
+
+  @media (--medium) {
+    top: -1.8rem;
+    left: 1rem;
+  }
+}
+
+.skill-total__number {
+  margin-bottom: 0.2rem;
+  font-size: 2.5rem;
+}
+
+.skill-total__heading {
+  margin-bottom: 1.2rem;
+  line-height: 1;
+  text-transform: capitalize;
+  color: var(--c-primary--text);
+}

@@ -1,0 +1,41 @@
+@import "../../00-base/breakpoints.css";
+
+.heading {
+  margin-top: 0;
+  text-align: center;
+  letter-spacing: 0.055rem;
+}
+
+.heading--lrg {
+  margin: 0.4rem 0 3.6rem;
+  font-size: clamp(2rem, 2.4vw, var(--f-size-lrg));
+  font-weight: 500;
+
+  @media (--medium) {
+    margin-bottom: 8.8rem;
+  }
+}
+
+.heading--md {
+  font-size: var(--f-size-md);
+  font-weight: normal;
+  letter-spacing: -0.02rem;
+}
+
+.heading--sm {
+  font-size: var(--f-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-text--alt);
+}
+
+.heading--bg {
+  display: inline-block;
+  padding: 0.4rem 4.2rem 0.6rem;
+  background: rgba(var(--c-gray--dark-rgb), 0.7);
+
+  @media (--medium) {
+    padding-left: 9.6rem;
+    padding-right: 9.6rem;
+  }
+}

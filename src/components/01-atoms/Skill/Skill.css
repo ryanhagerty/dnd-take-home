@@ -1,0 +1,224 @@
+@import "../../00-base/breakpoints.css";
+
+:root {
+  --border-width: 0.4rem;
+  --inactive-position: -5rem;
+}
+
+.skill {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  &:last-child {
+    flex: 0;
+  }
+
+  @media (--medium) {
+    flex-direction: row;
+  }
+}
+
+.skill__btn {
+  position: relative;
+  padding: 0;
+  width: 6.4rem;
+  height: 6.4rem;
+  border: inset 1px solid var(--c-border--highlight);
+  box-shadow: 1px 1px 2px 0px rgba(var(--c-black-rgb), 0.75);
+  background: var(--c-border--inset);
+  overflow: hidden;
+
+  &:hover {
+    .skill__img {
+      object-position: 0 0;
+      opacity: 1;
+
+      /* TODO: DND-002 - Reacquire sprite asset as individual
+       * images so that we can map them with standard
+       * positions across all images instead of manual CSS changes.
+       */
+      &[data-id="knife-fork"] {
+        object-position: -5rem 0;
+      }
+
+      &[data-id="cake"] {
+        object-position: -10rem 0;
+      }
+
+      &[data-id="crown"] {
+        object-position: -15rem 0;
+      }
+
+      &[data-id="boat"] {
+        object-position: -20rem 0;
+      }
+
+      &[data-id="scuba"] {
+        object-position: -25rem 0;
+      }
+
+      &[data-id="bolt"] {
+        object-position: -30rem 0;
+      }
+
+      &[data-id="skull"] {
+        object-position: -35rem 0;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--c-border);
+    background: var(--border-width)
+      linear-gradient(
+        0deg,
+        var(--c-border) 0%,
+        var(--c-border--dark) 50%,
+        var(--c-border) 56%
+      );
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0,
+      var(--border-width) var(--border-width),
+      var(--border-width) calc(100% - var(--border-width)),
+      calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+      calc(100% - var(--border-width)) var(--border-width),
+      var(--border-width) var(--border-width)
+    );
+    box-shadow: inset 1px 1px 0px 0 rgba(var(--c-white-rgb), 0.2);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.5s ease-out;
+  }
+}
+
+.skill__img {
+  position: relative;
+  top: 0.6rem;
+  left: 0.6rem;
+  object-fit: none;
+  object-position: 0 var(--inactive-position);
+  opacity: 0.8;
+
+  &[data-id="knife-fork"] {
+    object-position: -5rem var(--inactive-position);
+  }
+
+  &[data-id="cake"] {
+    object-position: -10rem var(--inactive-position);
+  }
+
+  &[data-id="crown"] {
+    object-position: -15rem var(--inactive-position);
+  }
+
+  &[data-id="boat"] {
+    object-position: -20rem var(--inactive-position);
+  }
+
+  &[data-id="scuba"] {
+    object-position: -25rem var(--inactive-position);
+  }
+
+  &[data-id="bolt"] {
+    object-position: -30rem var(--inactive-position);
+  }
+
+  &[data-id="skull"] {
+    object-position: -35rem var(--inactive-position);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.2s ease-out;
+  }
+}
+
+.skill__btn--active {
+  box-shadow: 0 0 0.7rem 0 rgba(var(--c-white-rgb), 0.4);
+
+  &::after {
+    background: var(--c-primary);
+    background: var(--border-width)
+      linear-gradient(
+        0deg,
+        var(--c-primary--light) 0%,
+        var(--c-primary--dark) 50%,
+        var(--c-primary) 56%
+      );
+  }
+
+  .skill__img {
+    object-position: 0 0;
+    opacity: 1;
+
+    &[data-id="knife-fork"] {
+      object-position: -5rem 0;
+    }
+
+    &[data-id="cake"] {
+      object-position: -10rem 0;
+    }
+
+    &[data-id="crown"] {
+      object-position: -15rem 0;
+    }
+
+    &[data-id="boat"] {
+      object-position: -20rem 0;
+    }
+
+    &[data-id="scuba"] {
+      object-position: -25rem 0;
+    }
+
+    &[data-id="bolt"] {
+      object-position: -30rem 0;
+    }
+
+    &[data-id="skull"] {
+      object-position: -35rem 0;
+    }
+  }
+
+  & + .skill__connect {
+    opacity: 1;
+  }
+}
+
+.skill__connect {
+  display: block;
+  width: 1.6rem;
+  height: 5.1rem;
+  background: var(--c-talent);
+  border-top: inset 1px solid var(--c-talent-inset);
+  border-bottom: inset 1px solid var(--c-talent-inset);
+  box-shadow: 0 0 2px 1px var(--c-talent-highlight);
+  opacity: 0.6;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.5s ease-out;
+  }
+
+  @media (--medium) {
+    position: relative;
+    align-self: center;
+    flex: 1;
+    width: auto;
+    max-width: 11rem;
+    height: 1.3rem;
+  }
+}

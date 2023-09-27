@@ -1,0 +1,49 @@
+:root {
+  /* Colors */
+  /* Neutrals */
+  --c-white: #ffffff;
+  --c-white-rgb: 255, 255, 255;
+  --c-black: #000000;
+  --c-black-rgb: 0, 0, 0;
+  --c-gray: #535353;
+  --c-gray--light: #c5c6c5;
+  --c-gray--dark: #191b1c;
+  --c-gray--dark-rgb: 25, 27, 28;
+
+  /* Border around inactive boxes */
+  --c-border: #4b4b4b;
+  --c-border--highlight: #5d5d5d;
+  --c-border--dark: #373737;
+  --c-border--inset: #2d3032;
+
+  /* Border around calc container */
+  --c-container-border: #0e141b;
+  --c-container-border--highlight: #364655;
+
+  /* Connecting bar to next talent */
+  --c-talent: #313234;
+  --c-talent-inset: #2e2f31;
+  --c-talent-highlight: #5c5c5c;
+
+  /* Blues */
+  --c-primary: #5d9ad8;
+  --c-primary--light: #6faae5;
+  --c-primary--dark: #1e3246;
+  /* The provided mock fails color contrast accessibility
+     for 'Points Total' so let's brighten it a bit */
+  --c-primary--text: #5f84ac;
+
+  --c-text: var(--c-white);
+  --c-text--alt: var(--c-gray--light);
+  --c-text--highlight: var(--c-primary--text);
+
+  /* Typography */
+  --f-size-lrg: 2.7rem;
+  --f-size-md: 2.5rem;
+  --f-size-sm: 1.4rem;
+
+  /* TODO: DND-003 - Work with design to establish standard
+   * margin/padding/font values so that we can create predictable
+   * values and spacing rhythm.
+   */
+}

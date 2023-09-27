@@ -1,0 +1,26 @@
+@import "components/00-base/variables.css";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  background: var(--c-black);
+  color: var(--c-white);
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
