@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import userEvent from '@testing-library/user-event';
+import userEvent from "@testing-library/user-event";
 import Skill from "./Skill";
 
 describe("Skill component", () => {
@@ -14,6 +14,7 @@ describe("Skill component", () => {
         mostRecentIndex={{ current: 0 }}
       />
     );
+
     expect(screen.getByAltText("alt text"));
   });
 
@@ -60,11 +61,11 @@ describe("Skill component", () => {
         mostRecentIndex={{ current: 0 }}
       />
     );
-    
-    const user = userEvent.setup()
+
+    const user = userEvent.setup();
     const element = getByTestId("skill__btn");
-    await user.keyboard('{Tab}{Enter}');
-    await user.keyboard('{Shift>}{Enter/}');
+    await user.keyboard("{Tab}{Enter}");
+    await user.keyboard("{Shift>}{Enter/}");
 
     expect(element?.classList.contains("skill__btn--active")).toBe(false);
   });

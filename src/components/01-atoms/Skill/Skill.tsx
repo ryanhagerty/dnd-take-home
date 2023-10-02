@@ -1,5 +1,11 @@
 import "./Skill.css";
-import { useState, MouseEvent, KeyboardEvent, TouchEvent, MutableRefObject } from "react";
+import {
+  useState,
+  MouseEvent,
+  KeyboardEvent,
+  TouchEvent,
+  MutableRefObject,
+} from "react";
 import spriteImg from "../../../assets/img/talent-icons-sprite.png";
 import { counter, increment, decrement } from "../../../utils/counter";
 import config from "../../../_config.json";
@@ -51,13 +57,18 @@ const Skill: React.FC<SkillProps> = ({
       return true;
     }
   };
-  
-  // One touch on mobile adds a skill point
-  // Two touches removes a skill point
+
+  /* One touch on mobile adds a skill point.
+   * Two touches removes a skill point.
+   * This is ignored from coverage due to React Testing
+   * Library's user-event simulating touch with mouse
+   * events. See: https://github.com/testing-library/user-event/issues/1095
+   */
+  /* c8 ignore next 5 */
   const handleMobileTouch = (e: TouchEvent) => {
     if (e.touches) {
-			removeSkillPoint();
-		}
+      removeSkillPoint();
+    }
   };
 
   const handleClick = () => {
