@@ -9,7 +9,7 @@ describe("SkillTotal component", () => {
     render(
       <SkillTotal totalSkill={config.maxSkillPoints} title="Points spent" />
     );
-    expect(screen.getByText(config.maxSkillPoints));
+    expect(screen.getByText('6'));
   });
 
   it("used skill points text updates after skill click", () => {

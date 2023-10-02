@@ -30,9 +30,6 @@ describe("Skill component", () => {
     const element = getByTestId("skill__btn");
     fireEvent.click(element);
     expect(element?.classList.contains("skill__btn--active")).toBe(true);
-
-    fireEvent.contextMenu(element);
-    expect(element?.classList.contains("skill__btn--active")).toBe(false);
   });
 
   it("removes active class on right click", () => {

@@ -5,6 +5,8 @@ import SkillTree from "./SkillTree";
 describe("SkillTree component", () => {
   it("renders the SkillTree and heading text", () => {
     render(<SkillTree parentTree={0} title="Talent Path 1" skills={[]} />);
+
+    expect(screen.getByText("Talent Path 1"));
   });
 
   it("renders the Skill children", () => {
