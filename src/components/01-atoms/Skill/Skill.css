@@ -202,7 +202,8 @@
 .skill__connect {
   display: block;
   width: 1.6rem;
-  height: 5.1rem;
+  height: 7vh;
+  max-height: 5.1rem;
   background: var(--c-talent);
   border-top: inset 1px solid var(--c-talent-inset);
   border-bottom: inset 1px solid var(--c-talent-inset);
@@ -220,5 +221,6 @@
     width: auto;
     max-width: 11rem;
     height: 1.3rem;
+    max-height: none;
   }
 }
