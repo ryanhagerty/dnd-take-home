@@ -39,7 +39,6 @@ const Skill: React.FC<SkillProps> = ({
   /* Because right click is not accessible for keyboard
    * users, we allow for 'shift + enter' to remove
    * skill points.
-   * This will be excluded from test coverage.
    */
   const handleAccessibleKeys = (e: KeyboardEvent) => {
     if (e.key === "Enter" && e.shiftKey) {
