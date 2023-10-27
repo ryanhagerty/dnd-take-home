@@ -21,20 +21,20 @@
       display: none;
     }
   }
+}
 
-  .heading {
-    padding: 0 1rem;
+.skill-tree__heading {
+  padding: 0 1rem;
 
-    @media (--medium) {
-      position: relative;
-      margin-bottom: 0;
-      top: -0.4rem;
-      left: -0.2rem;
-      padding: 0 2.8rem 0 0;
-    }
+  @media (--medium) {
+    position: relative;
+    margin-bottom: 0;
+    top: -0.4rem;
+    left: -0.2rem;
+    padding: 0 2.8rem 0 0;
+  }
 
-    @media (--large) {
-      padding-right: 4.2rem;
-    }
+  @media (--large) {
+    padding-right: 4.2rem;
   }
 }

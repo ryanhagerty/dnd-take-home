@@ -28,7 +28,7 @@ const SkillTree: React.FC<SkillTreeProps> = ({ title, parentTree, skills }) => {
 
   return (
     <div className="skill-tree" test-id="skill-tree">
-      <Heading level="2" className="heading heading--sm">
+      <Heading level="2" className="heading heading--sm skill-tree__heading">
         {title}
       </Heading>
       {skills.map((skill, index) => {
