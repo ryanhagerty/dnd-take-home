@@ -15,6 +15,7 @@ npm run dev-lan / Identical to the 'dev' command, but exposes an IP for LAN deve
 npm run build / Build TitanStar Legends for deployment
 npm run preview / Preview your build locally
 npm run lint / Runs eslint for linting your JS
+npm run format / Formats all files based on Prettier config
 npm run test / Runs tests for all our components
 npm run coverage / Visualizes and exposes code coverage
 ```
