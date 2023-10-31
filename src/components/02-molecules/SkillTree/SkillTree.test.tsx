@@ -21,7 +21,7 @@ describe("SkillTree component", () => {
     render(
       <Provider store={store}>
         <SkillTree parentTree={0} title="Talent Path 1" skills={[]} />
-      </Provider>
+      </Provider>,
     );
 
     expect(screen.getByText("Talent Path 1"));
@@ -42,7 +42,7 @@ describe("SkillTree component", () => {
             },
           ]}
         />
-      </Provider>
+      </Provider>,
     );
 
     expect(screen.getByAltText("alt text"));

@@ -22,7 +22,7 @@ describe("SkillTotal component", () => {
     render(
       <Provider store={store}>
         <SkillTotal title="Points spent" />
-      </Provider>
+      </Provider>,
     );
     expect(screen.getByText("6"));
   });
@@ -40,7 +40,7 @@ describe("SkillTotal component", () => {
           selectedItems={[]}
           mostRecentIndex={{ current: 0 }}
         />
-      </Provider>
+      </Provider>,
     );
 
     expect(screen.getByText("1 /"));

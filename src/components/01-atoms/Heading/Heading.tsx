@@ -19,7 +19,7 @@ const Heading = ({
   return React.createElement(
     `h${level}`,
     { className: `${classes}` },
-    children
+    children,
   );
 };
 

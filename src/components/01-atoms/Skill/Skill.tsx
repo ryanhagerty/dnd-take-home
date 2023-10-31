@@ -29,7 +29,7 @@ const Skill: React.FC<SkillProps> = ({
   const [activeClass, setActiveClass] = useState(false);
   const dispatch = useDispatch();
   const count = useSelector(
-    (state: RootState) => state.skillPointer.skillPoints
+    (state: RootState) => state.skillPointer.skillPoints,
   );
   const maxSkill = initialState.maxSkillPoints;
 

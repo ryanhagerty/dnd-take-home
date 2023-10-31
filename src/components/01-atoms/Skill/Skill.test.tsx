@@ -28,7 +28,7 @@ describe("Skill component", () => {
           selectedItems={[]}
           mostRecentIndex={{ current: 0 }}
         />
-      </Provider>
+      </Provider>,
     );
 
     expect(screen.getByAltText("alt text"));
@@ -46,7 +46,7 @@ describe("Skill component", () => {
           selectedItems={[]}
           mostRecentIndex={{ current: 0 }}
         />
-      </Provider>
+      </Provider>,
     );
 
     const element = getByTestId("skill__btn");
@@ -66,7 +66,7 @@ describe("Skill component", () => {
           selectedItems={[]}
           mostRecentIndex={{ current: 0 }}
         />
-      </Provider>
+      </Provider>,
     );
 
     const element = getByTestId("skill__btn");
@@ -87,7 +87,7 @@ describe("Skill component", () => {
           selectedItems={[]}
           mostRecentIndex={{ current: 0 }}
         />
-      </Provider>
+      </Provider>,
     );
 
     const user = userEvent.setup();
@@ -110,7 +110,7 @@ describe("Skill component", () => {
           selectedItems={[]}
           mostRecentIndex={{ current: 0 }}
         />
-      </Provider>
+      </Provider>,
     );
 
     const element = getByTestId("skill__btn");

@@ -20,6 +20,7 @@ npm run coverage / Visualizes and exposes code coverage
 ```
 
 ### Technology used
+
 - [React](https://react.dev/)
 - [Typescript](https://www.typescriptlang.org/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)

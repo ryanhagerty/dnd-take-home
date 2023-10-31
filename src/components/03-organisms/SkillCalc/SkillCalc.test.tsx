@@ -21,7 +21,7 @@ describe("SkillCalc component", () => {
     render(
       <Provider store={store}>
         <SkillCalc />
-      </Provider>
+      </Provider>,
     );
   });
 });

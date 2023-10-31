@@ -9,7 +9,7 @@ declare type SkillTotalProps = {
 
 const SkillTotal: React.FC<SkillTotalProps> = ({ title }) => {
   const count = useSelector(
-    (state: RootState) => state.skillPointer.skillPoints
+    (state: RootState) => state.skillPointer.skillPoints,
   );
   const maxSkill = initialState.maxSkillPoints;
 

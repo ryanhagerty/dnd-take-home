@@ -1,41 +1,44 @@
-[{
-  "title": "Talent path 1",
-  "skills": [
-    {
-      "altText": "Stacked layers icon",
-      "dataId": "layers"
-    },
-    {
-      "altText": "Knife and fork icon",
-      "dataId": "knife-fork"
-    },
-    {
-      "altText": "Birthday cake with candles icon",
-      "dataId": "cake"
-    },
-    {
-      "altText": "Crown icon",
-      "dataId": "crown"
-    }
-  ]},
+[
   {
-  "title": "Talent path 2",
-  "skills": [
-    {
-      "altText": "Forward facing boat in the sea icon",
-      "dataId": "boat"
-    },
-    {
-      "altText": "Scuba mask and snorkel icon",
-      "dataId": "scuba"
-    },
-    {
-      "altText": "Lightning bolt icon",
-      "dataId": "bolt"
-    },
-    {
-      "altText": "Skull icon",
-      "dataId": "skull"
-    }
-  ]}
+    "title": "Talent path 1",
+    "skills": [
+      {
+        "altText": "Stacked layers icon",
+        "dataId": "layers"
+      },
+      {
+        "altText": "Knife and fork icon",
+        "dataId": "knife-fork"
+      },
+      {
+        "altText": "Birthday cake with candles icon",
+        "dataId": "cake"
+      },
+      {
+        "altText": "Crown icon",
+        "dataId": "crown"
+      }
+    ]
+  },
+  {
+    "title": "Talent path 2",
+    "skills": [
+      {
+        "altText": "Forward facing boat in the sea icon",
+        "dataId": "boat"
+      },
+      {
+        "altText": "Scuba mask and snorkel icon",
+        "dataId": "scuba"
+      },
+      {
+        "altText": "Lightning bolt icon",
+        "dataId": "bolt"
+      },
+      {
+        "altText": "Skull icon",
+        "dataId": "skull"
+      }
+    ]
+  }
 ]
