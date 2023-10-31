@@ -7,8 +7,9 @@ import {
   MutableRefObject,
 } from "react";
 import spriteImg from "../../../assets/img/talent-icons-sprite.png";
-import { counter, increment, decrement } from "../../../utils/counter";
-import config from "../../../_config.json";
+import { useDispatch, useSelector } from "react-redux";
+import { ADD_COUNTER, MIN_COUNTER } from "../../../store/consts";
+import { initialState, RootState } from "../../../store/initialState";
 
 declare type SkillProps = {
   altText: string;
@@ -26,11 +27,15 @@ const Skill: React.FC<SkillProps> = ({
   mostRecentIndex,
 }) => {
   const [activeClass, setActiveClass] = useState(false);
-  const count = counter.use();
+  const dispatch = useDispatch();
+  const count = useSelector(
+    (state: RootState) => state.skillPointer.skillPoints
+  );
+  const maxSkill = initialState.maxSkillPoints;
 
   const removeSkillPoint = () => {
     if (activeClass && index === mostRecentIndex.current) {
-      decrement(1);
+      dispatch({ type: MIN_COUNTER });
       setActiveClass(!activeClass);
       selectedItems[index] = false;
       mostRecentIndex.current = index - 1;
@@ -72,8 +77,8 @@ const Skill: React.FC<SkillProps> = ({
   };
 
   const handleClick = () => {
-    if (count < config.maxSkillPoints && !activeClass && determineDisabled()) {
-      increment(1);
+    if (count < maxSkill && !activeClass && determineDisabled()) {
+      dispatch({ type: ADD_COUNTER });
       setActiveClass(!activeClass);
       selectedItems[index] = true;
       mostRecentIndex.current = index;

@@ -2,7 +2,6 @@ import "./SkillCalc.css";
 import Heading from "../../01-atoms/Heading/Heading";
 import SkillTree from "../../02-molecules/SkillTree/SkillTree";
 import SkillTotal from "../../02-molecules/SkillTotal/SkillTotal";
-import config from "../../../_config.json";
 import jsonData from "../../../_data.json";
 
 const SkillCalc = () => {
@@ -22,7 +21,7 @@ const SkillCalc = () => {
             />
           ))}
         </div>
-        <SkillTotal totalSkill={config.maxSkillPoints} title="Points spent" />
+        <SkillTotal title="Points spent" />
       </div>
     </section>
   );

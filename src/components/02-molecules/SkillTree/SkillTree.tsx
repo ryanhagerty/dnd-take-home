@@ -22,9 +22,8 @@ const SkillTree: React.FC<SkillTreeProps> = ({ title, parentTree, skills }) => {
 
   const selectedItems =
     parentTree === 0 ? selectedItemsTree1 : selectedItemsTree2;
-  const selectedRef = 
-  parentTree === 0 ? mostRecentIndexRef1 : mostRecentIndexRef2;
-  
+  const selectedRef =
+    parentTree === 0 ? mostRecentIndexRef1 : mostRecentIndexRef2;
 
   return (
     <div className="skill-tree" test-id="skill-tree">
