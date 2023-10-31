@@ -20,7 +20,7 @@ describe("SkillTree component", () => {
 
     render(
       <Provider store={store}>
-        <SkillTree parentTree={0} title="Talent Path 1" skills={[]} />
+        <SkillTree title="Talent Path 1" skills={[]} />
       </Provider>,
     );
 
@@ -33,7 +33,6 @@ describe("SkillTree component", () => {
     render(
       <Provider store={store}>
         <SkillTree
-          parentTree={0}
           title="Talent Path 1"
           skills={[
             {

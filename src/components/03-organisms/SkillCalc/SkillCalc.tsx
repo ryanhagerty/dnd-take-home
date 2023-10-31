@@ -15,7 +15,6 @@ const SkillCalc = () => {
           {jsonData.map((item, index) => (
             <SkillTree
               key={`${item.title}-${index}`}
-              parentTree={index}
               title={item.title}
               skills={item.skills}
             />

@@ -2,28 +2,22 @@ import "./SkillTree.css";
 import { useState, useRef } from "react";
 import Heading from "../../01-atoms/Heading/Heading";
 import Skill from "../../01-atoms/Skill/Skill";
+import jsonData from "../../../_data.json";
 
 declare type SkillTreeProps = {
   title: string;
-  parentTree: number;
   skills: {
     altText: string;
     dataId: string;
   }[];
 };
 
-const SkillTree: React.FC<SkillTreeProps> = ({ title, parentTree, skills }) => {
-  // TODO: DND-001 - Refactor tree sorter so that any number of talent
-  // paths can be added without the need for additional code.
-  const selectedItemsTree1 = useState<boolean[]>(Array(4).fill(false))[0];
-  const selectedItemsTree2 = useState<boolean[]>(Array(4).fill(false))[0];
-  const mostRecentIndexRef1 = useRef<number | null>(null);
-  const mostRecentIndexRef2 = useRef<number | null>(null);
-
-  const selectedItems =
-    parentTree === 0 ? selectedItemsTree1 : selectedItemsTree2;
-  const selectedRef =
-    parentTree === 0 ? mostRecentIndexRef1 : mostRecentIndexRef2;
+const SkillTree: React.FC<SkillTreeProps> = ({ title, skills }) => {
+  const skillLength = jsonData?.[0]?.skills?.length;
+  const selectedItemsTree = useState<boolean[]>(
+    Array(skillLength).fill(false),
+  )[0];
+  const mostRecentIndexRef = useRef<number | null>(null);
 
   return (
     <div className="skill-tree" test-id="skill-tree">
@@ -37,8 +31,8 @@ const SkillTree: React.FC<SkillTreeProps> = ({ title, parentTree, skills }) => {
             altText={skill.altText}
             dataId={skill.dataId}
             index={index}
-            selectedItems={selectedItems}
-            mostRecentIndex={selectedRef}
+            selectedItems={selectedItemsTree}
+            mostRecentIndex={mostRecentIndexRef}
           />
         );
       })}
