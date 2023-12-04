@@ -29,7 +29,7 @@ npm run coverage / Visualizes and exposes code coverage
 - Each item only accounts for one point.
 - Displays current point total
   - The user must select the items in order.
-      -For example: The user may not put a point in the cake without first having put points in the chevrons and the silverware (in that order).
+      - For example: The user may not put a point in the cake without first having put points in the chevrons and the silverware (in that order).
 
 
 ### Technology used
