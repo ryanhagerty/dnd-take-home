@@ -20,6 +20,18 @@ npm run test / Runs tests for all our components
 npm run coverage / Visualizes and exposes code coverage
 ```
 
+### Criteria
+
+- Styles of submission match the provided mock (under `/public/demoImg.jpg`).
+- Left click to add points.
+- Right click to remove points.
+- The user may only use up to 6 points.
+- Each item only accounts for one point.
+- Displays current point total
+  - The user must select the items in order.
+      -For example: The user may not put a point in the cake without first having put points in the chevrons and the silverware (in that order).
+
+
 ### Technology used
 
 - [React](https://react.dev/)
